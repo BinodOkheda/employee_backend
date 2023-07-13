@@ -10,6 +10,10 @@ const mongoose = require('mongoose');
 const {userRouter} = require("./routes/user.route")
 const {employeeRouter} = require("./routes/employee.route")
 
+app.get("/",(req,res)=>{
+    res.send("Home Page")
+})
+
 app.use("/user",userRouter)
 app.use("/employee",employeeRouter)
 
